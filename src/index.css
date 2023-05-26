@@ -1,13 +1,224 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* basic style resets */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap"); */
+
+/* variables */
+:root {
+	--white: #ffffff;
+	--gray-muted: #00000029;
+	--green: #20b716;
+	--slate: #e2e8f0;
+	--error-red: #ee2d6e;
+	--black: #000000;
+	--red: #d9185f;
+	--blue-light: #4285f4;
+	--blue-primary: #1877f2;
+	--text-xs: 13px;
+	--text-sm: 14px;
+	--text-nm: 16px;
+	--text-lg: 19px;
+	--text-xl: 29px;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	text-align: center;
+	font-family: "Josefin Sans", sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+img {
+	width: 100%;
+	aspect-ratio: auto;
+}
+
+/* ui-page */
+.login-page {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	padding: 16px;
+}
+
+/* logincard */
+.login-card {
+	background-color: #fff;
+	max-width: 577px;
+	width: min(577px, 90vw);
+	border-radius: 6px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.login-card::before {
+	content: "";
+	position: absolute;
+	width: 100vw;
+	height: 263px;
+	top: 0;
+	left: 0;
+	background-image: url("./assests/ui-bg.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: -1;
+}
+
+.card-head {
+	box-shadow: 0px 3px 7px #00000029;
+	border-radius: 6px 6px 0 0;
+	padding-top: 14px;
+	padding-bottom: 12px;
+	width: 100%;
+	display: grid;
+	place-items: center;
+}
+
+.card-head > img {
+	height: 32px;
+	width: 99px;
+}
+
+.login-title {
+	font-size: var(--text-xl);
+	color: var(--green);
+	font-weight: 400;
+	margin-top: 16px;
+	margin-bottom: 24px;
+}
+.image-shown > img {
+	margin-bottom: 4px;
+	height: 128px;
+	width: min(385px, 80vw);
+}
+
+/* buttons */
+button {
+	outline: none;
+	border: none;
+	cursor: pointer;
+	font-family: "Josefin Sans", sans-serif;
+}
+
+.button {
+	width: min(386px, 85vw);
+}
+.sign-in {
+	padding-block: 15px;
+	color: var(--white);
+	font-size: var(--text-lg);
+	background-color: var(--green);
+	border-radius: 40px;
+	margin-top: 24px;
+}
+
+.google,
+.facebook {
+	position: relative;
+	font-weight: 600;
+	font-size: var(--text-sm);
+	color: var(--white);
+	background-color: var(--blue-primary);
+	padding-top: 16px;
+	padding-bottom: 15px;
+	display: flex;
+	align-self: center;
+	justify-content: center;
+	margin-top: 16px;
+	overflow: hidden;
+	transition: background-color 300ms linear;
+}
+
+.google:hover,
+.facebook:hover {
+	background-color: var(--blue-light);
+}
+
+/* .facebook {
+	margin-bottom: 49px;
+} */
+
+.icons {
+	width: 36px;
+	aspect-ratio: 1/1;
+	position: absolute;
+	left: 4px;
+	top: 5px;
+}
+
+/* input fields */
+input {
+	border: none;
+	border-bottom: 3px solid var(--slate);
+	outline: none;
+	width: min(385px, 85vw);
+	margin-top: 20px;
+	padding-bottom: 9px;
+}
+
+input::placeholder {
+	color: var(--green);
+	font-size: var(--text-nm);
+	padding-bottom: 9px;
+}
+
+/* error styling */
+.error-icon {
+	width: 16px;
+	aspect-ratio: 1/1;
+}
+
+.error-message {
+	font-family: "Myriad Pro", sans-serif;
+	width: min(385px, 80vw);
+	color: var(--error-red);
+	font-size: var(--text-xs);
+	font-weight: normal;
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	margin-top: 8px;
+}
+
+.input-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.user-options {
+	display: flex;
+	justify-content: space-between;
+	font-size: var(--text-sm);
+	width: min(385px, 90vw);
+	margin-top: 16px;
+}
+
+.forgot-password {
+	color: var(--black);
+}
+
+.sign-up {
+	color: var(--red);
+}
+
+.or {
+	font-size: var(--text-nm);
+	color: var(--black);
+	margin-top: 16px;
+	margin-bottom: 8px;
+	font-weight: normal;
 }
