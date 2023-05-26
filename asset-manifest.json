@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/react-challenge1-login/static/css/main.a5d2fe10.css",
+    "main.css": "/react-challenge1-login/static/css/main.12971e96.css",
     "main.js": "/react-challenge1-login/static/js/main.16d8f922.js",
     "static/media/ui-bg.png": "/react-challenge1-login/static/media/ui-bg.81e87c5a7c1aa4bbc951.png",
+    "static/media/MYRIADPRO-REGULAR.woff": "/react-challenge1-login/static/media/MYRIADPRO-REGULAR.d30b05461519da431d12.woff",
     "static/media/ui-picture.png": "/react-challenge1-login/static/media/ui-picture.d7dc4992530dc20f4a06.png",
     "index.html": "/react-challenge1-login/index.html",
-    "main.a5d2fe10.css.map": "/react-challenge1-login/static/css/main.a5d2fe10.css.map",
+    "main.12971e96.css.map": "/react-challenge1-login/static/css/main.12971e96.css.map",
     "main.16d8f922.js.map": "/react-challenge1-login/static/js/main.16d8f922.js.map"
   },
   "entrypoints": [
-    "static/css/main.a5d2fe10.css",
+    "static/css/main.12971e96.css",
     "static/js/main.16d8f922.js"
   ]
 }
